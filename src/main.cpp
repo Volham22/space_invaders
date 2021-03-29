@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cstdint>
 #include <limits>
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 bool game_running = false;
@@ -282,10 +282,9 @@ int main(int argc, char* argv[])
 
     glfwMakeContextCurrent(window);
 
-    GLenum err = glewInit();
-    if(err != GLEW_OK)
+    if(!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress))
     {
-        fprintf(stderr, "Error initializing GLEW.\n");
+        fprintf(stderr, "Error initializing GLAD");
         glfwTerminate();
         return -1;
     }

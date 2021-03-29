@@ -2,3 +2,8 @@ main.dSYM
 main
 *.swp
 .DS_Store
+SpaceInvader
+CMakeCache.txt
+Makefile
+*.cmake
+CMakeFiles/
