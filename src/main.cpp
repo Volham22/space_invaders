@@ -1038,10 +1038,10 @@ int main(int argc, char* argv[])
         glfwPollEvents();
     }
 
+    glDeleteVertexArrays(1, &fullscreen_triangle_vao);
+
     glfwDestroyWindow(window);
     glfwTerminate();
-
-    glDeleteVertexArrays(1, &fullscreen_triangle_vao);
 
     for(size_t i = 0; i < 6; ++i)
     {
